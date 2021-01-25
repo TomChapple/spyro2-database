@@ -39,6 +39,11 @@
             "type": "string",
             "description": "Text defined within the context of this database"
         },
+        "Reference": {
+            "type": "string",
+            "description": "An absolute path to an object as a JSON Pointer (RFC 6901). This serves as an identifier within the document.",
+            "pattern": "^(\\/([^~/]|(~[01]))*)*$"
+        },
         "Level": {
             "type": "object",
             "description": "A playable, in-game area where Spyro can be controlled.",
