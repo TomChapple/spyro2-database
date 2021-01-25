@@ -1,0 +1,111 @@
+{
+    "definitions": {
+        "IETFLanguageTag": {
+            "type": "string",
+            "description": "An [IETF language tag](https://en.wikipedia.org/wiki/IETF_language_tag) identifying a human language. The regex for this tag was defined by [\"porges\" on StackOverflow](https://stackoverflow.com/questions/7035825/regular-expression-for-a-language-tag-as-defined-by-bcp47/7036171#7036171)",
+            "pattern": "^(((en-GB-oed|i-ami|i-bnn|i-default|i-enochian|i-hak|i-klingon|i-lux|i-mingo|i-navajo|i-pwn|i-tao|i-tay|i-tsu|sgn-BE-FR|sgn-BE-NL|sgn-CH-DE)|(art-lojban|cel-gaulish|no-bok|no-nyn|zh-guoyu|zh-hakka|zh-min|zh-min-nan|zh-xiang))|((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+))$",
+            "examples": ["en-us", "en-gb", "fr", "ja"]
+        },
+        "Locale": {
+            "type": "object",
+            "description": "A language that is present on this game. If a language is present, all instances of LocalisedText should contain a key matching its \"id\" value.",
+            "properties": {
+                "id": {
+                    "$ref": "#/definitions/IETFLanguageTag"
+                },
+                "name": {
+                    "$ref": "#/definitions/DescriptiveText"
+                }
+            },
+            "required": ["id", "name"]
+        },
+        "LocalisedText": {
+            "type": "object",
+            "description": "In-game text that varies depending on the locale the game is in. This can vary on game version or, in the case of the PAL version, the language chosen at the title screen.",
+            "propertyNames": {
+                "$ref": "#/definitions/IETFLanguageTag"
+            },
+            "additionalProperties": {
+                "type": "string"
+            },
+            "examples": [
+                {
+                    "en-gb": "Glimmer",
+                    "fr": "Lueur"
+                }
+            ]
+        },
+        "DescriptiveText": {
+            "type": "string",
+            "description": "Text defined within the context of this database"
+        },
+        "Level": {
+            "type": "object",
+            "description": "A playable, in-game area where Spyro can be controlled.",
+            "properties": {
+                "name": {
+                    "$ref": "#/definitions/LocalisedText"
+                },
+                "npcs": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/NPC"
+                    }
+                }
+            }
+        },
+        "NPC": {
+            "type": "object",
+            "description": "A computer-controlled character that move around the world including enemies and allies. NPCs that have dialogue are considered \"interactive\".",
+            "properties": {
+                "name": {
+                    "$ref": "#/definitions/LocalisedText"
+                },
+                "dialogues": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Dialogue"
+                    }
+                },
+                "location": {
+                    "$ref": "#/definitions/Location"
+                }
+            },
+            "required": [
+                "name"
+            ]
+        },
+        "Dialogue": {
+            "type": "object",
+            "description": "A conversation that Spyro can have with an NPC that can include dialogue options and multiple pages.",
+            "properties": {
+                "pages": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/LocalisedText"
+                    }
+                }
+            },
+            "required": ["pages"]
+        },
+        "Location": {
+            "$ref": "#/definitions/DescriptiveText",
+            "description": "Where this entity is located within the Level."
+        }
+    },
+    "type": "object",
+    "properties": {
+        "locales": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/Locale"
+            }
+        },
+        "levels": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/Level"
+            }
+        }
+    }
+}

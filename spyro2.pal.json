@@ -1,0 +1,73 @@
+{
+    "$schema": "./spyro2.schema.json",
+    "locales": [
+        {
+            "id": "en-gb",
+            "name": "English"
+        },
+        {
+            "id": "fr",
+            "name": "Français"
+        }
+    ],
+    "levels": [
+        {
+            "name": {
+                "en-gb": "Glimmer",
+                "fr": "Lueur"
+            },
+            "npcs": [
+                {
+                    "name": {
+                        "en-gb": "Pogo the Gemcutter",
+                        "fr": "Pogo le Tailleur de Joyaux"
+                    },
+                    "dialogues": [
+                        {
+                            "pages": [
+                                {
+                                    "en-gb": "Hi Spyro, welcome to Glimmer! Unfortunately for us, a mob of lizards just showed up and started stealing all of our gems. Can you stop them?",
+                                    "fr": "Spyro, bienvenue à Lueur! Quelle catastrophe! Une bande de lézards nous a attaqués et cherche à s’emparer de tous nos joyaux. Peux-tu les arrêter?"
+                                }
+                            ]
+                        },
+                        {
+                            "pages": [
+                                {
+                                    "en-gb": "If you can find my friend Twitchy, he'll reward you for helping us out.",
+                                    "fr": "Si tu retrouves mon ami Twitchy, il te récompensera de ton aide."
+                                }
+                            ]
+                        }
+                    ],
+                    "location": "At the beginning of the level"
+                },
+                {
+                    "name": {
+                        "en-gb": "Zoe",
+                        "fr": "Zoé"
+                    },
+                    "dialogues": [
+                        {
+                            "pages": [
+                                {
+                                    "en-gb": "Hi, Spyro. I’m a friend of Elora’s, and she’s asked me to help you out. Whenever you find me, I’ll remember your progress, like this...",
+                                    "fr": "Spyro, je suis une amie d’Elora et elle m’a demandé de t’aider. Chaque fois que tu me verras, j’enregistrerai ta progression, comme ceci..."
+                                }
+                            ]
+                        },
+                        {
+                            "pages": [
+                                {
+                                    "en-gb": "That zap means that if you get into trouble, I’ll return you to this place. See you around!",
+                                    "fr": "Ce signal indique que, lorsque tu auras des ennuis, je te ramènerai à cet endroit. À bientôt!"
+                                }
+                            ]
+                        }
+                    ],
+                    "location": "Outside the entrance to the cave"
+                }
+            ]
+        }
+    ]
+}
