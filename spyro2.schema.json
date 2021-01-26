@@ -74,7 +74,7 @@
         },
         "OwnSpecificOrbPrerequisite": {
             "type": "object",
-            "description": "A prerequisite that involves owning all of the specified orbs",
+            "description": "A prerequisite that involves owning a certain orb. This is mostly useful for completed levels to allow the exit portal to appear. Most minigames that require multiple runs require dialogue to be complete rather than the previous orb to be collected.",
             "properties": {
                 "requirement": {
                     "const": "own-specific-orb"
