@@ -182,7 +182,8 @@
                     "type": "object",
                     "description": "A reward for completing a challenge. Levels can have multiple orbs and they can sometimes be the prerequisite for entering other levels.",
                     "properties": {
-                        "name": { "$ref": "#/definitions/LocalisedText" }
+                        "name": { "$ref": "#/definitions/LocalisedText" },
+                        "location": { "$ref": "#/definitions/Location" }
                     },
                     "required": ["name"]
                 }
