@@ -148,6 +148,7 @@
                 "name": {
                     "$ref": "#/definitions/LocalisedText"
                 },
+                "talisman": { "$ref": "#/definitions/Talisman" },
                 "npcs": {
                     "type": "array",
                     "items": {
@@ -161,6 +162,14 @@
                     }
                 }
             }
+        },
+        "Talisman": {
+            "type": "object",
+            "description": "A level-specific reward for reaching the end of a level. This is not guaranteed on every level.",
+            "properties": {
+                "name": { "$ref": "#/definitions/LocalisedText" }
+            },
+            "required": ["name"]
         },
         "Portal": {
             "allOf": [
