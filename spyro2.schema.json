@@ -39,10 +39,19 @@
             "type": "string",
             "description": "Text defined within the context of this database"
         },
+        "Reference": {
+            "type": "string",
+            "description": "An absolute path to an object as a JSON Pointer (RFC 6901). This serves as an identifier within the document.",
+            "pattern": "^(\\/([^~/]|(~[01]))*)*$"
+        },
         "Level": {
             "type": "object",
             "description": "A playable, in-game area where Spyro can be controlled.",
             "properties": {
+                "kind": {
+                    "type": "string",
+                    "description": "The category of level this is associated with. Additional properties may be required depending on the category."
+                },
                 "name": {
                     "$ref": "#/definitions/LocalisedText"
                 },
@@ -53,6 +62,100 @@
                     }
                 }
             }
+        },
+        "HomeworldContained": {
+            "type": "object",
+            "description": "This extension is used for levels that are contained within a homeworld and contains a reference to that homeworld.",
+            "properties": {
+                "homeworld": { "$ref": "#/definitions/Reference" }
+            },
+            "required": ["homeworld"]
+        },
+        "HomeworldLevel": {
+            "allOf": [
+                { "$ref": "#/definitions/Level" },
+                {
+                    "type": "object",
+                    "properties": {
+                        "kind": {
+                            "const": "homeworld"
+                        }
+                    },
+                    "required": ["kind"]
+                }
+            ],
+            "description": "A hub level with multiple portals to other levels. These tend to be considered the worlds of the game."
+        },
+        "RealmLevel": {
+            "allOf": [
+                { "$ref": "#/definitions/Level" },
+                { "$ref": "#/definitions/HomeworldContained" },
+                {
+                    "type": "object",
+                    "properties": {
+                        "kind": {
+                            "const": "realm"
+                        }
+                    },
+                    "required": ["kind"]
+                }
+            ],
+            "description": "A level with a goal to reach that end and receive a reward. These levels are owned by a homeworld and tend to have a portal at the end to return to it."
+        },
+        "SpeedwayLevel": {
+            "allOf": [
+                { "$ref": "#/definitions/Level" },
+                { "$ref": "#/definitions/HomeworldContained" },
+                {
+                    "type": "object",
+                    "properties": {
+                        "kind": {
+                            "const": "speedway"
+                        },
+                        "targets": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "name": { "$ref": "#/definitions/LocalisedText" },
+                                    "count": {
+                                        "type": "integer",
+                                        "description": "The number of targets that must be answered to complete this task."
+                                    },
+                                    "bonusTime": {
+                                        "type": "number",
+                                        "description": "A bonus amount of time, in seconds, that is granted when an instance of this target is answered. This is only awarded before the speedway has been completed for the first time."
+                                    }
+                                }
+                            },
+                            "minItems": 4,
+                            "maxItems": 4
+                        },
+                        "timeLimit": {
+                            "type": "number",
+                            "description": "The time limit that is imposed on players before the speedway has been completed the first time. The time listed in seconds, but milliseconds can be specified via decimal points."
+                        }
+                    },
+                    "required": ["kind", "targets", "timeLimit"]
+                }
+            ],
+            "description": "A challenge level that requires a number of tasks to be completed within a time limit."
+        },
+        "BossLevel": {
+            "allOf": [
+                { "$ref": "#/definitions/Level" },
+                { "$ref": "#/definitions/HomeworldContained" },
+                {
+                    "type": "object",
+                    "properties": {
+                        "kind": {
+                            "const": "boss"
+                        },
+                        "boss": { "$ref": "#/definitions/Reference" }
+                    },
+                    "required": ["kind", "boss"]
+                }
+            ]
         },
         "NPC": {
             "type": "object",
@@ -104,7 +207,12 @@
         "levels": {
             "type": "array",
             "items": {
-                "$ref": "#/definitions/Level"
+                "anyOf": [
+                    { "$ref": "#/definitions/RealmLevel"},
+                    { "$ref": "#/definitions/HomeworldLevel" },
+                    { "$ref": "#/definitions/SpeedwayLevel" },
+                    { "$ref": "#/definitions/BossLevel" }
+                ]
             }
         }
     }

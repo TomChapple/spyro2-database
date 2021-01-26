@@ -12,10 +12,18 @@
     ],
     "levels": [
         {
+            "kind": "homeworld",
+            "name": {
+                "en-gb": "Summer Forest"
+            }
+        },
+        {
+            "kind": "realm",
             "name": {
                 "en-gb": "Glimmer",
                 "fr": "Lueur"
             },
+            "homeworld": "/levels/0",
             "npcs": [
                 {
                     "name": {
@@ -68,6 +76,59 @@
                     "location": "Outside the entrance to the cave"
                 }
             ]
+        },
+        {
+            "kind": "speedway",
+            "name": {
+                "en-gb": "Ocean Speedway"
+            },
+            "homeworld": "/levels/0",
+            "targets": [
+                {
+                    "name": {
+                        "en-gb": "Rings"
+                    },
+                    "bonusTime": 1,
+                    "count": 8
+                },
+                {
+                    "name": {
+                        "en-gb": "Arches"
+                    },
+                    "bonusTime": 2,
+                    "count": 8
+                },
+                {
+                    "name": {
+                        "en-gb": "Boats"
+                    },
+                    "bonusTime": 3,
+                    "count": 8
+                },
+                {
+                    "name": {
+                        "en-gb": "Cars"
+                    },
+                    "bonusTime": 2,
+                    "count": 8
+                }
+            ],
+            "timeLimit": 30
+        },
+        {
+            "kind": "boss",
+            "name": {
+                "en-gb": "Crush's Dungeon"
+            },
+            "homeworld": "/levels/0",
+            "npcs": [
+                {
+                    "name": {
+                        "en-gb": "Crush"
+                    }
+                }
+            ],
+            "boss": "/levels/3/npcs/0"
         }
     ]
 }
