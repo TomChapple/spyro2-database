@@ -114,6 +114,21 @@
                 }
             ],
             "timeLimit": 30
+        },
+        {
+            "kind": "boss",
+            "name": {
+                "en-gb": "Crush's Dungeon"
+            },
+            "homeworld": "/levels/0",
+            "npcs": [
+                {
+                    "name": {
+                        "en-gb": "Crush"
+                    }
+                }
+            ],
+            "boss": "/levels/3/npcs/0"
         }
     ]
 }

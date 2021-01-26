@@ -141,6 +141,22 @@
             ],
             "description": "A challenge level that requires a number of tasks to be completed within a time limit."
         },
+        "BossLevel": {
+            "allOf": [
+                { "$ref": "#/definitions/Level" },
+                { "$ref": "#/definitions/HomeworldContained" },
+                {
+                    "type": "object",
+                    "properties": {
+                        "kind": {
+                            "const": "boss"
+                        },
+                        "boss": { "$ref": "#/definitions/Reference" }
+                    },
+                    "required": ["kind", "boss"]
+                }
+            ]
+        },
         "NPC": {
             "type": "object",
             "description": "A computer-controlled character that move around the world including enemies and allies. NPCs that have dialogue are considered \"interactive\".",
@@ -194,7 +210,8 @@
                 "anyOf": [
                     { "$ref": "#/definitions/RealmLevel"},
                     { "$ref": "#/definitions/HomeworldLevel" },
-                    { "$ref": "#/definitions/SpeedwayLevel" }
+                    { "$ref": "#/definitions/SpeedwayLevel" },
+                    { "$ref": "#/definitions/BossLevel" }
                 ]
             }
         }
