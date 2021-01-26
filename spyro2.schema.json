@@ -63,6 +63,14 @@
                 }
             }
         },
+        "HomeworldContained": {
+            "type": "object",
+            "description": "This extension is used for levels that are contained within a homeworld and contains a reference to that homeworld.",
+            "properties": {
+                "homeworld": { "$ref": "#/definitions/Reference" }
+            },
+            "required": ["homeworld"]
+        },
         "HomeworldLevel": {
             "allOf": [
                 { "$ref": "#/definitions/Level" },
@@ -77,6 +85,22 @@
                 }
             ],
             "description": "A hub level with multiple portals to other levels. These tend to be considered the worlds of the game."
+        },
+        "RealmLevel": {
+            "allOf": [
+                { "$ref": "#/definitions/Level" },
+                { "$ref": "#/definitions/HomeworldContained" },
+                {
+                    "type": "object",
+                    "properties": {
+                        "kind": {
+                            "type": "string",
+                            "enum": ["realm"]
+                        }
+                    }
+                }
+            ],
+            "description": "A level with a goal to reach that end and receive a reward. These levels are owned by a homeworld and tend to have a portal at the end to return to it."
         },
         "NPC": {
             "type": "object",
@@ -129,6 +153,7 @@
             "type": "array",
             "items": {
                 "anyOf": [
+                    { "$ref": "#/definitions/RealmLevel"},
                     { "$ref": "#/definitions/HomeworldLevel" },
                 ]
             }
