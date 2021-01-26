@@ -88,6 +88,11 @@
                     ],
                     "location": "Outside the entrance to the cave"
                 }
+            ],
+            "portals": [
+                {
+                    "destination": "/levels/0"
+                }
             ]
         },
         {
