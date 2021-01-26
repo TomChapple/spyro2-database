@@ -80,7 +80,8 @@
                         "kind": {
                             "const": "homeworld"
                         }
-                    }
+                    },
+                    "required": ["kind"]
                 }
             ],
             "description": "A hub level with multiple portals to other levels. These tend to be considered the worlds of the game."
@@ -95,7 +96,8 @@
                         "kind": {
                             "const": "realm"
                         }
-                    }
+                    },
+                    "required": ["kind"]
                 }
             ],
             "description": "A level with a goal to reach that end and receive a reward. These levels are owned by a homeworld and tend to have a portal at the end to return to it."
@@ -134,7 +136,7 @@
                             "description": "The time limit that is imposed on players before the speedway has been completed the first time. The time listed in seconds, but milliseconds can be specified via decimal points."
                         }
                     },
-                    "required": ["targets", "timeLimit"]
+                    "required": ["kind", "targets", "timeLimit"]
                 }
             ],
             "description": "A challenge level that requires a number of tasks to be completed within a time limit."
