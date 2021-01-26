@@ -44,6 +44,99 @@
             "description": "An absolute path to an object as a JSON Pointer (RFC 6901). This serves as an identifier within the document.",
             "pattern": "^(\\/([^~/]|(~[01]))*)*$"
         },
+        "SpendGemsPrerequisite": {
+            "type": "object",
+            "description": "A prerequisite that involves spending a certain number of gems",
+            "properties": {
+                "requirement": {
+                    "const": "spend-gems"
+                },
+                "amount": {
+                    "type": "integer",
+                    "minimum": 0
+                }
+            },
+            "required": ["requirement", "amount"]
+        },
+        "OwnOrbsPrerequisite": {
+            "type": "object",
+            "description": "A prerequisite that involves owning a certain number of orbs",
+            "properties": {
+                "requirement": {
+                    "const": "own-orbs"
+                },
+                "amount": {
+                    "type": "integer",
+                    "minimum": 0
+                }
+            },
+            "required": ["requirement", "amount"]
+        },
+        "OwnSpecificOrbPrerequisite": {
+            "type": "object",
+            "description": "A prerequisite that involves owning a certain orb. This is mostly useful for completed levels to allow the exit portal to appear. Most minigames that require multiple runs require dialogue to be complete rather than the previous orb to be collected.",
+            "properties": {
+                "requirement": {
+                    "const": "own-specific-orb"
+                },
+                "orb": { "$ref": "#/definitions/Reference" }
+            },
+            "required": ["requirement", "orb"]
+        },
+        "OwnTalismansPrerequisite": {
+            "type": "object",
+            "description": "A prerequisite that involves owning a certain number of talismans",
+            "properties": {
+                "requirement": {
+                    "const": "own-talismans"
+                },
+                "amount": {
+                    "type": "integer",
+                    "minimum": 0
+                }
+            },
+            "required": ["requirement", "amount"]
+        },
+        "OwnSpecificTalismanPrerequisite": {
+            "type": "object",
+            "description": "A prerequisite that involves owning a certain talisman. This is often used for completed levels to allow the exit portal to appear.",
+            "properties": {
+                "requirement": {
+                    "const": "own-specific-talisman"
+                },
+                "talisman": { "$ref": "#/definitions/Reference" }
+            },
+            "required": ["requirement", "talisman"]
+        },
+        "CompleteDialoguePrerequisite": {
+            "type": "object",
+            "description": "A prerequisite that involves completing a dialogue with an NPC",
+            "properties": {
+                "requirement": {
+                    "const": "complete-dialogue"
+                },
+                "dialogue": { "$ref": "#/definitions/Reference" }
+            },
+            "required": ["requirement", "dialogue"]
+        },
+        "HasPrerequisites": {
+            "type": "object",
+            "properties": {
+                "prerequisites": {
+                    "type": "array",
+                    "items": {
+                        "anyOf": [
+                            { "$ref": "#/definitions/SpendGemsPrerequisite" },
+                            { "$ref": "#/definitions/OwnOrbsPrerequisite" },
+                            { "$ref": "#/definitions/OwnSpecificOrbPrerequisite" },
+                            { "$ref": "#/definitions/OwnTalismansPrerequisite" },
+                            { "$ref": "#/definitions/OwnSpecificTalismanPrerequisite" },
+                            { "$ref": "#/definitions/CompleteDialoguePrerequisite" }
+                        ]
+                    }
+                }
+            }
+        },
         "Level": {
             "type": "object",
             "description": "A playable, in-game area where Spyro can be controlled.",
@@ -60,8 +153,28 @@
                     "items": {
                         "$ref": "#/definitions/NPC"
                     }
+                },
+                "portals": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Portal"
+                    }
                 }
             }
+        },
+        "Portal": {
+            "allOf": [
+                { "$ref": "#/definitions/HasPrerequisites" },
+                {
+                    "type": "object",
+                    "description": "An in-level object that allows for a transition into another level.",
+                    "properties": {
+                        "destination": { "$ref": "#/definitions/Reference" },
+                        "location": { "$ref": "#/definitions/DescriptiveText" }
+                    },
+                    "required": ["destination"]
+                }
+            ]
         },
         "HomeworldContained": {
             "type": "object",

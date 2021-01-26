@@ -15,7 +15,32 @@
             "kind": "homeworld",
             "name": {
                 "en-gb": "Summer Forest"
-            }
+            },
+            "portals": [
+                {
+                    "destination": "/levels/1",
+                    "location": "Opposite entrance to domed room with broken bridge within the wooded garden with a river running through it."
+                },
+                {
+                    "destination": "/levels/2",
+                    "location": "Up the stairs on the left branch from the inner-castle hub.",
+                    "prerequisites": [
+                        {
+                            "requirement": "own-orbs",
+                            "amount": 3
+                        }
+                    ]
+                },
+                {
+                    "destination": "/levels/3",
+                    "prerequisites": [
+                        {
+                            "requirement": "own-talismans",
+                            "amount": 6
+                        }
+                    ]
+                }
+            ]
         },
         {
             "kind": "realm",
@@ -74,6 +99,17 @@
                         }
                     ],
                     "location": "Outside the entrance to the cave"
+                }
+            ],
+            "portals": [
+                {
+                    "destination": "/levels/0",
+                    "prerequisites": [
+                        {
+                            "requirement": "own-specific-talisman",
+                            "talisman": "/levels/1/talisman"
+                        }
+                    ]
                 }
             ]
         },
