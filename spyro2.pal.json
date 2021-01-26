@@ -48,6 +48,11 @@
                 "en-gb": "Glimmer",
                 "fr": "Lueur"
             },
+            "talisman": {
+                "name": {
+                    "en-gb": "Magic Pick"
+                }
+            },
             "homeworld": "/levels/0",
             "npcs": [
                 {
