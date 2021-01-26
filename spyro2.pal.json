@@ -16,6 +16,29 @@
             "name": {
                 "en-gb": "Summer Forest"
             },
+            "orbs": [
+                {
+                    "name": {
+                        "en-gb": "Hunter's challenge"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "On a secret ledge"
+                    },
+                    "location": "Starting from the wooded garden with a river running in the centre, follow the river until you reach a pool. Follow a hole in the bottom of that pool until you reach a room with large steps. Jump up the ledges and you will find the orb on a ledge overlooking the entrance to Colossus."
+                },
+                {
+                    "name": {
+                        "en-gb": "Atop a ladder"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "Behind the door"
+                    }
+                }
+            ],
             "portals": [
                 {
                     "destination": "/levels/1",
@@ -53,6 +76,23 @@
                     "en-gb": "Magic Pick"
                 }
             },
+            "orbs": [
+                {
+                    "name": {
+                        "en-gb": "Lizard hunt"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "Gem Lamp Flight outdoors"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "Gem Lamp Flight in cave"
+                    }
+                }
+            ],
             "homeworld": "/levels/0",
             "npcs": [
                 {
@@ -123,6 +163,13 @@
             "name": {
                 "en-gb": "Ocean Speedway"
             },
+            "orbs": [
+                {
+                    "name": {
+                        "en-gb": "Follow Hunter"
+                    }
+                }
+            ],
             "homeworld": "/levels/0",
             "targets": [
                 {

@@ -149,6 +149,10 @@
                     "$ref": "#/definitions/LocalisedText"
                 },
                 "talisman": { "$ref": "#/definitions/Talisman" },
+                "orbs": {
+                    "type": "array",
+                    "items": { "$ref": "#/definitions/Orb" }
+                },
                 "npcs": {
                     "type": "array",
                     "items": {
@@ -170,6 +174,21 @@
                 "name": { "$ref": "#/definitions/LocalisedText" }
             },
             "required": ["name"]
+        },
+        "Orb": {
+            "allOf": [
+                { "$ref": "#/definitions/HasPrerequisites" },
+                {
+                    "type": "object",
+                    "description": "A reward for completing a challenge. Levels can have multiple orbs and they can sometimes be the prerequisite for entering other levels.",
+                    "properties": {
+                        "name": { "$ref": "#/definitions/LocalisedText" },
+                        "location": { "$ref": "#/definitions/Location" }
+                    },
+                    "required": ["name"]
+                }
+        
+            ]
         },
         "Portal": {
             "allOf": [
