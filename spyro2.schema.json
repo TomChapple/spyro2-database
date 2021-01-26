@@ -198,7 +198,7 @@
                     "description": "An in-level object that allows for a transition into another level.",
                     "properties": {
                         "destination": { "$ref": "#/definitions/Reference" },
-                        "location": { "$ref": "#/definitions/DescriptiveText" }
+                        "location": { "$ref": "#/definitions/Location" }
                     },
                     "required": ["destination"]
                 }
