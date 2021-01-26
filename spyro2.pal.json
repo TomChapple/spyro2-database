@@ -15,7 +15,20 @@
             "kind": "homeworld",
             "name": {
                 "en-gb": "Summer Forest"
-            }
+            },
+            "portals": [
+                {
+                    "destination": "/levels/1",
+                    "location": "Opposite entrance to domed room with broken bridge within the wooded garden with a river running through it."
+                },
+                {
+                    "destination": "/levels/2",
+                    "location": "Up the stairs on the left branch from the inner-castle hub."
+                },
+                {
+                    "destination": "/levels/3"
+                }
+            ]
         },
         {
             "kind": "realm",

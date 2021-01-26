@@ -60,8 +60,23 @@
                     "items": {
                         "$ref": "#/definitions/NPC"
                     }
+                },
+                "portals": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Portal"
+                    }
                 }
             }
+        },
+        "Portal": {
+            "type": "object",
+            "description": "An in-level object that allows for a transition into another level.",
+            "properties": {
+                "destination": { "$ref": "#/definitions/Reference" },
+                "location": { "$ref": "#/definitions/DescriptiveText" }
+            },
+            "required": ["destination"]
         },
         "HomeworldContained": {
             "type": "object",
