@@ -12,10 +12,18 @@
     ],
     "levels": [
         {
+            "kind": "homeworld",
+            "name": {
+                "en-gb": "Summer Forest"
+            }
+        },
+        {
+            "kind": "realm",
             "name": {
                 "en-gb": "Glimmer",
                 "fr": "Lueur"
             },
+            "homeworld": "/levels/0",
             "npcs": [
                 {
                     "name": {
