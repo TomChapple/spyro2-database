@@ -16,6 +16,28 @@
             "name": {
                 "en-gb": "Summer Forest"
             },
+            "orbs": [
+                {
+                    "name": {
+                        "en-gb": "Hunter's challenge"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "On a secret ledge"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "Atop a ladder"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "Behind the door"
+                    }
+                }
+            ],
             "portals": [
                 {
                     "destination": "/levels/1",
@@ -53,6 +75,23 @@
                     "en-gb": "Magic Pick"
                 }
             },
+            "orbs": [
+                {
+                    "name": {
+                        "en-gb": "Lizard hunt"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "Gem Lamp Flight outdoors"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "Gem Lamp Flight in cave"
+                    }
+                }
+            ],
             "homeworld": "/levels/0",
             "npcs": [
                 {
@@ -123,6 +162,13 @@
             "name": {
                 "en-gb": "Ocean Speedway"
             },
+            "orbs": [
+                {
+                    "name": {
+                        "en-gb": "Follow Hunter"
+                    }
+                }
+            ],
             "homeworld": "/levels/0",
             "targets": [
                 {
