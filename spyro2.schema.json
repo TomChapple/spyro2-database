@@ -48,6 +48,10 @@
             "type": "object",
             "description": "A playable, in-game area where Spyro can be controlled.",
             "properties": {
+                "kind": {
+                    "type": "string",
+                    "description": "The category of level this is associated with. Additional properties may be required depending on the category."
+                },
                 "name": {
                     "$ref": "#/definitions/LocalisedText"
                 },
@@ -58,6 +62,21 @@
                     }
                 }
             }
+        },
+        "HomeworldLevel": {
+            "allOf": [
+                { "$ref": "#/definitions/Level" },
+                {
+                    "type": "object",
+                    "properties": {
+                        "kind": {
+                            "type": "string",
+                            "enum": ["homeworld"]
+                        }
+                    }
+                }
+            ],
+            "description": "A hub level with multiple portals to other levels. These tend to be considered the worlds of the game."
         },
         "NPC": {
             "type": "object",
@@ -109,7 +128,9 @@
         "levels": {
             "type": "array",
             "items": {
-                "$ref": "#/definitions/Level"
+                "anyOf": [
+                    { "$ref": "#/definitions/HomeworldLevel" },
+                ]
             }
         }
     }
