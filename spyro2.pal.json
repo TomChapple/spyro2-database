@@ -76,6 +76,44 @@
                     "location": "Outside the entrance to the cave"
                 }
             ]
+        },
+        {
+            "kind": "speedway",
+            "name": {
+                "en-gb": "Ocean Speedway"
+            },
+            "homeworld": "/levels/0",
+            "targets": [
+                {
+                    "name": {
+                        "en-gb": "Rings"
+                    },
+                    "bonusTime": 1,
+                    "count": 8
+                },
+                {
+                    "name": {
+                        "en-gb": "Arches"
+                    },
+                    "bonusTime": 2,
+                    "count": 8
+                },
+                {
+                    "name": {
+                        "en-gb": "Boats"
+                    },
+                    "bonusTime": 3,
+                    "count": 8
+                },
+                {
+                    "name": {
+                        "en-gb": "Cars"
+                    },
+                    "bonusTime": 2,
+                    "count": 8
+                }
+            ],
+            "timeLimit": 30
         }
     ]
 }

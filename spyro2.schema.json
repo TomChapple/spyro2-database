@@ -100,6 +100,45 @@
             ],
             "description": "A level with a goal to reach that end and receive a reward. These levels are owned by a homeworld and tend to have a portal at the end to return to it."
         },
+        "SpeedwayLevel": {
+            "allOf": [
+                { "$ref": "#/definitions/Level" },
+                { "$ref": "#/definitions/HomeworldContained" },
+                {
+                    "type": "object",
+                    "properties": {
+                        "kind": {
+                            "const": "speedway"
+                        },
+                        "targets": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "name": { "$ref": "#/definitions/LocalisedText" },
+                                    "count": {
+                                        "type": "integer",
+                                        "description": "The number of targets that must be answered to complete this task."
+                                    },
+                                    "bonusTime": {
+                                        "type": "number",
+                                        "description": "A bonus amount of time, in seconds, that is granted when an instance of this target is answered. This is only awarded before the speedway has been completed for the first time."
+                                    }
+                                }
+                            },
+                            "minItems": 4,
+                            "maxItems": 4
+                        },
+                        "timeLimit": {
+                            "type": "number",
+                            "description": "The time limit that is imposed on players before the speedway has been completed the first time. The time listed in seconds, but milliseconds can be specified via decimal points."
+                        }
+                    },
+                    "required": ["targets", "timeLimit"]
+                }
+            ],
+            "description": "A challenge level that requires a number of tasks to be completed within a time limit."
+        },
         "NPC": {
             "type": "object",
             "description": "A computer-controlled character that move around the world including enemies and allies. NPCs that have dialogue are considered \"interactive\".",
@@ -152,7 +191,8 @@
             "items": {
                 "anyOf": [
                     { "$ref": "#/definitions/RealmLevel"},
-                    { "$ref": "#/definitions/HomeworldLevel" }
+                    { "$ref": "#/definitions/HomeworldLevel" },
+                    { "$ref": "#/definitions/SpeedwayLevel" }
                 ]
             }
         }
