@@ -78,8 +78,7 @@
                     "type": "object",
                     "properties": {
                         "kind": {
-                            "type": "string",
-                            "enum": ["homeworld"]
+                            "const": "homeworld"
                         }
                     }
                 }
@@ -94,8 +93,7 @@
                     "type": "object",
                     "properties": {
                         "kind": {
-                            "type": "string",
-                            "enum": ["realm"]
+                            "const": "realm"
                         }
                     }
                 }
