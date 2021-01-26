@@ -154,7 +154,7 @@
             "items": {
                 "anyOf": [
                     { "$ref": "#/definitions/RealmLevel"},
-                    { "$ref": "#/definitions/HomeworldLevel" },
+                    { "$ref": "#/definitions/HomeworldLevel" }
                 ]
             }
         }
