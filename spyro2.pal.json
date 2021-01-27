@@ -274,6 +274,46 @@
             ]
         },
         {
+            "kind": "realm",
+            "name": {
+                "en-gb": "Sunny Beach"
+            },
+            "talisman": {
+                "name": {
+                    "en-gb": "Turtle Medallion"
+                }
+            },
+            "orbs": [
+                {
+                    "name": {
+                        "en-gb": "Blasting boxes"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "Turtle soup I"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "Turtle soup II"
+                    }
+                }
+            ],
+            "homeworld": "/levels/0",
+            "portals": [
+                {
+                    "destination": "/levels/0",
+                    "prerequisites": [
+                        {
+                            "requirement": "own-specific-talisman",
+                            "talisman": "/levels/5/talisman"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "kind": "speedway",
             "name": {
                 "en-gb": "Ocean Speedway"
