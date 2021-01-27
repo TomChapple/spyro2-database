@@ -45,7 +45,28 @@
                     "location": "Opposite entrance to domed room with broken bridge within the wooded garden with a river running through it."
                 },
                 {
-                    "destination": "/levels/2",
+                    "destination": "/levels/2"
+                },
+                {
+                    "destination": "/levels/3"
+                },
+                {
+                    "destination": "/levels/4"
+                },
+                {
+                    "destination": "/levels/5"
+                },
+                {
+                    "destination": "/levels/6",
+                    "prerequisites": [
+                        {
+                            "requirement": "spend-gems",
+                            "amount": 400
+                        }
+                    ]
+                },
+                {
+                    "destination": "/levels/7",
                     "location": "Up the stairs on the left branch from the inner-castle hub.",
                     "prerequisites": [
                         {
@@ -55,7 +76,7 @@
                     ]
                 },
                 {
-                    "destination": "/levels/3",
+                    "destination": "/levels/8",
                     "prerequisites": [
                         {
                             "requirement": "own-talismans",
