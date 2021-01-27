@@ -159,6 +159,41 @@
             ]
         },
         {
+            "kind": "realm",
+            "name": {
+                "en-gb": "Idol Springs"
+            },
+            "talisman": {
+                "name": {
+                    "en-gb": "Jade Idol"
+                }
+            },
+            "orbs": [
+                {
+                    "name": {
+                        "en-gb": "Foreman Bud's puzzles"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "Hula Girl rescue"
+                    }
+                }
+            ],
+            "homeworld": "/levels/0",
+            "portals": [
+                {
+                    "destination": "/levels/0",
+                    "prerequisites": [
+                        {
+                            "requirement": "own-specific-talisman",
+                            "talisman": "/levels/2/talisman"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "kind": "speedway",
             "name": {
                 "en-gb": "Ocean Speedway"
