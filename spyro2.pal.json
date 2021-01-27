@@ -194,6 +194,46 @@
             ]
         },
         {
+            "kind": "realm",
+            "name": {
+                "en-gb": "Colossus"
+            },
+            "talisman": {
+                "name": {
+                    "en-gb": "Golden Statue"
+                }
+            },
+            "orbs": [
+                {
+                    "name": {
+                        "en-gb": "Hockey vs. Goalie"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "Hockey one on one"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "Evil spirit search"
+                    }
+                }
+            ],
+            "homeworld": "/levels/0",
+            "portals": [
+                {
+                    "destination": "/levels/0",
+                    "prerequisites": [
+                        {
+                            "requirement": "own-specific-talisman",
+                            "talisman": "/levels/3/talisman"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "kind": "speedway",
             "name": {
                 "en-gb": "Ocean Speedway"
