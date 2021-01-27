@@ -234,6 +234,46 @@
             ]
         },
         {
+            "kind": "realm",
+            "name": {
+                "en-gb": "Hurricos"
+            },
+            "talisman": {
+                "name": {
+                    "en-gb": "Gear of Power"
+                }
+            },
+            "orbs": [
+                {
+                    "name": {
+                        "en-gb": "Stone thief chase"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "Factory Glide 1"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "Factory Glide 2"
+                    }
+                }
+            ],
+            "homeworld": "/levels/0",
+            "portals": [
+                {
+                    "destination": "/levels/0",
+                    "prerequisites": [
+                        {
+                            "requirement": "own-specific-talisman",
+                            "talisman": "/levels/4/talisman"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "kind": "speedway",
             "name": {
                 "en-gb": "Ocean Speedway"
