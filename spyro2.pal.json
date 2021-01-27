@@ -314,6 +314,46 @@
             ]
         },
         {
+            "kind": "realm",
+            "name": {
+                "en-gb": "Aquaria Towers"
+            },
+            "talisman": {
+                "name": {
+                    "en-gb": "Enchanted Shell"
+                }
+            },
+            "orbs": [
+                {
+                    "name": {
+                        "en-gb": "Seahorse rescue"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "Manta ride I"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "Manta ride II"
+                    }
+                }
+            ],
+            "homeworld": "/levels/0",
+            "portals": [
+                {
+                    "destination": "/levels/0",
+                    "prerequisites": [
+                        {
+                            "requirement": "own-specific-talisman",
+                            "talisman": "/levels/6/talisman"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "kind": "speedway",
             "name": {
                 "en-gb": "Ocean Speedway"
