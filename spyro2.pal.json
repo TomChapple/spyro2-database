@@ -746,6 +746,46 @@
                     ]
                 }
             ]
+        },
+        {
+            "kind": "realm",
+            "name": {
+                "en-gb": "Magma Cone"
+            },
+            "talisman": {
+                "name": {
+                    "en-gb": "Volcano Idol"
+                }
+            },
+            "orbs": [
+                {
+                    "name": {
+                        "en-gb": "Party crashers"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "Crystal geysers I"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "Crystal geysers II"
+                    }
+                }
+            ],
+            "homeworld": "/levels/9",
+            "portals": [
+                {
+                    "destination": "/levels/9",
+                    "prerequisites": [
+                        {
+                            "requirement": "own-specific-talisman",
+                            "talisman": "/levels/16/talisman"
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
