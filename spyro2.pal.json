@@ -866,6 +866,51 @@
                 }
             ],
             "timeLimit": 30
+        },
+        {
+            "kind": "speedway",
+            "name": {
+                "en-gb": "Icy Speedway"
+            },
+            "orbs": [
+                {
+                    "name": {
+                        "en-gb": "Parasail through Rings"
+                    }
+                }
+            ],
+            "homeworld": "/levels/9",
+            "targets": [
+                {
+                    "name": {
+                        "en-gb": "Snowmobiles"
+                    },
+                    "bonusTime": 3,
+                    "count": 8
+                },
+                {
+                    "name": {
+                        "en-gb": "Arches"
+                    },
+                    "bonusTime": 2,
+                    "count": 8
+                },
+                {
+                    "name": {
+                        "en-gb": "Skaters"
+                    },
+                    "bonusTime": 2,
+                    "count": 8
+                },
+                {
+                    "name": {
+                        "en-gb": "Serpents"
+                    },
+                    "bonusTime": 3,
+                    "count": 8
+                }
+            ],
+            "timeLimit": 30
         }
     ]
 }
