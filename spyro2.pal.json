@@ -821,6 +821,51 @@
                     ]
                 }
             ]
+        },
+        {
+            "kind": "speedway",
+            "name": {
+                "en-gb": "Metro Speedway"
+            },
+            "orbs": [
+                {
+                    "name": {
+                        "en-gb": "Grab the Loot"
+                    }
+                }
+            ],
+            "homeworld": "/levels/9",
+            "targets": [
+                {
+                    "name": {
+                        "en-gb": "Pigeons"
+                    },
+                    "bonusTime": 2,
+                    "count": 8
+                },
+                {
+                    "name": {
+                        "en-gb": "Jumpers"
+                    },
+                    "bonusTime": 3,
+                    "count": 8
+                },
+                {
+                    "name": {
+                        "en-gb": "Slow Signs"
+                    },
+                    "bonusTime": 1,
+                    "count": 8
+                },
+                {
+                    "name": {
+                        "en-gb": "Arches"
+                    },
+                    "bonusTime": 2,
+                    "count": 8
+                }
+            ],
+            "timeLimit": 30
         }
     ]
 }
