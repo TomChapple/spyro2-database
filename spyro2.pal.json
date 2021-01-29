@@ -786,6 +786,41 @@
                     ]
                 }
             ]
+        },
+        {
+            "kind": "realm",
+            "name": {
+                "en-gb": "Shady Oasis"
+            },
+            "talisman": {
+                "name": {
+                    "en-gb": "Mystic Lamp"
+                }
+            },
+            "orbs": [
+                {
+                    "name": {
+                        "en-gb": "Catch 3 thieves"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "Free Hippos"
+                    }
+                }
+            ],
+            "homeworld": "/levels/9",
+            "portals": [
+                {
+                    "destination": "/levels/9",
+                    "prerequisites": [
+                        {
+                            "requirement": "own-specific-talisman",
+                            "talisman": "/levels/17/talisman"
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
