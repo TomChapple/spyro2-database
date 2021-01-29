@@ -516,6 +516,46 @@
                     "destination": "/levels/21"
                 }
             ]
+        },
+        {
+            "kind": "realm",
+            "name": {
+                "en-gb": "Skelos Badlands"
+            },
+            "talisman": {
+                "name": {
+                    "en-gb": "Ancient Bone"
+                }
+            },
+            "orbs": [
+                {
+                    "name": {
+                        "en-gb": "Lava lizards I"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "Lava lizards II"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "Dem bones"
+                    }
+                }
+            ],
+            "homeworld": "/levels/9",
+            "portals": [
+                {
+                    "destination": "/levels/9",
+                    "prerequisites": [
+                        {
+                            "requirement": "own-specific-talisman",
+                            "talisman": "/levels/10/talisman"
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
