@@ -626,6 +626,51 @@
                     ]
                 }
             ]
+        },
+        {
+            "kind": "realm",
+            "name": {
+                "en-gb": "Zephyr"
+            },
+            "talisman": {
+                "name": {
+                    "en-gb": "Ruby Bomb"
+                }
+            },
+            "orbs": [
+                {
+                    "name": {
+                        "en-gb": "Cowlek corral I"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "Cowlek corral II"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "Sowing seeds I"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "Sowing seeds II"
+                    }
+                }
+            ],
+            "homeworld": "/levels/9",
+            "portals": [
+                {
+                    "destination": "/levels/9",
+                    "prerequisites": [
+                        {
+                            "requirement": "own-specific-talisman",
+                            "talisman": "/levels/13/talisman"
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
