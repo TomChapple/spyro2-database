@@ -591,6 +591,41 @@
                     ]
                 }
             ]
+        },
+        {
+            "kind": "realm",
+            "name": {
+                "en-gb": "Breeze Harbor"
+            },
+            "talisman": {
+                "name": {
+                    "en-gb": "Glass Anchor"
+                }
+            },
+            "orbs": [
+                {
+                    "name": {
+                        "en-gb": "Mine blast"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "Gear grab"
+                    }
+                }
+            ],
+            "homeworld": "/levels/9",
+            "portals": [
+                {
+                    "destination": "/levels/9",
+                    "prerequisites": [
+                        {
+                            "requirement": "own-specific-talisman",
+                            "talisman": "/levels/12/talisman"
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
