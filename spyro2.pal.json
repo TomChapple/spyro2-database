@@ -911,6 +911,21 @@
                 }
             ],
             "timeLimit": 30
+        },
+        {
+            "kind": "boss",
+            "name": {
+                "en-gb": "Gulp's Overlook"
+            },
+            "homeworld": "/levels/9",
+            "npcs": [
+                {
+                    "name": {
+                        "en-gb": "Gulp"
+                    }
+                }
+            ],
+            "boss": "/levels/20/npcs/0"
         }
     ]
 }
