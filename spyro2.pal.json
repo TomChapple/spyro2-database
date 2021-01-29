@@ -556,6 +556,41 @@
                     ]
                 }
             ]
+        },
+        {
+            "kind": "realm",
+            "name": {
+                "en-gb": "Crystal Glacier"
+            },
+            "talisman": {
+                "name": {
+                    "en-gb": "Ice Crystal"
+                }
+            },
+            "orbs": [
+                {
+                    "name": {
+                        "en-gb": "Draclet cave"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "George the snow leopard"
+                    }
+                }
+            ],
+            "homeworld": "/levels/9",
+            "portals": [
+                {
+                    "destination": "/levels/9",
+                    "prerequisites": [
+                        {
+                            "requirement": "own-specific-talisman",
+                            "talisman": "/levels/11/talisman"
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
