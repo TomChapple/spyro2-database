@@ -706,6 +706,46 @@
                     ]
                 }
             ]
+        },
+        {
+            "kind": "realm",
+            "name": {
+                "en-gb": "Fracture Hills"
+            },
+            "talisman": {
+                "name": {
+                    "en-gb": "Bronze Flute"
+                }
+            },
+            "orbs": [
+                {
+                    "name": {
+                        "en-gb": "Free the faun"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "Alchemist escort"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "Earthshaper bash"
+                    }
+                }
+            ],
+            "homeworld": "/levels/9",
+            "portals": [
+                {
+                    "destination": "/levels/9",
+                    "prerequisites": [
+                        {
+                            "requirement": "own-specific-talisman",
+                            "talisman": "/levels/15/talisman"
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
