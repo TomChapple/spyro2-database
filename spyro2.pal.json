@@ -433,6 +433,89 @@
                 }
             ],
             "boss": "/levels/8/npcs/0"
+        },
+        {
+            "kind": "homeworld",
+            "name": {
+                "en-gb": "Autumn Plains"
+            },
+            "orbs": [
+                {
+                    "name": {
+                        "en-gb": "The end of the wall"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "Long glide!"
+                    }
+                }
+            ],
+            "portals": [
+                {
+                    "destination": "/levels/0"
+                },
+                {
+                    "destination": "/levels/10"
+                },
+                {
+                    "destination": "/levels/11"
+                },
+                {
+                    "destination": "/levels/12"
+                },
+                {
+                    "destination": "/levels/13",
+                    "prerequisites": [
+                        {
+                            "requirement": "spend-gems",
+                            "amount": 400
+                        }
+                    ]
+                },
+                {
+                    "destination": "/levels/14"
+                },
+                {
+                    "destination": "/levels/15"
+                },
+                {
+                    "destination": "/levels/16"
+                },
+                {
+                    "destination": "/levels/17",
+                    "prerequisites": [
+                        {
+                            "requirement": "spend-gems",
+                            "amount": 400
+                        }
+                    ]
+                },
+                {
+                    "destination": "/levels/18",
+                    "prerequisites": [
+                        {
+                            "requirement": "own-orbs",
+                            "amount": 6
+                        }
+                    ]
+                },
+                {
+                    "destination": "/levels/19",
+                    "prerequisites": [
+                        {
+                            "requirement": "spend-gems",
+                            "amount": 100
+                        }
+                    ]
+                },
+                {
+                    "destination": "/levels/20"
+                },
+                {
+                    "destination": "/levels/21"
+                }
+            ]
         }
     ]
 }
