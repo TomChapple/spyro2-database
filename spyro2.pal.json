@@ -671,6 +671,41 @@
                     ]
                 }
             ]
+        },
+        {
+            "kind": "realm",
+            "name": {
+                "en-gb": "Scorch"
+            },
+            "talisman": {
+                "name": {
+                    "en-gb": "Emerald Scarab"
+                }
+            },
+            "orbs": [
+                {
+                    "name": {
+                        "en-gb": "Barrel of Monkeys"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "Capture the flags"
+                    }
+                }
+            ],
+            "homeworld": "/levels/9",
+            "portals": [
+                {
+                    "destination": "/levels/9",
+                    "prerequisites": [
+                        {
+                            "requirement": "own-specific-talisman",
+                            "talisman": "/levels/14/talisman"
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
