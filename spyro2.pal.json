@@ -926,6 +926,82 @@
                 }
             ],
             "boss": "/levels/20/npcs/0"
+        },
+        {
+            "kind": "homeworld",
+            "name": {
+                "en-gb": "Winter Tundra"
+            },
+            "orbs": [
+                {
+                    "name": {
+                        "en-gb": "Top of the waterfall"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "One the tall wall"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "Smash the rock"
+                    }
+                }
+            ],
+            "portals": [
+                {
+                    "destination": "/levels/22"
+                },
+                {
+                    "destination": "/levels/23",
+                    "prerequisites": [
+                        {
+                            "requirement": "own-orbs",
+                            "amount": 15
+                        }
+                    ]
+                },
+                {
+                    "destination": "/levels/24"
+                },
+                {
+                    "destination": "/levels/25",
+                    "prerequisites": [
+                        {
+                            "requirement": "own-orbs",
+                            "amount": 25
+                        }
+                    ]
+                },
+                {
+                    "destination": "/levels/26",
+                    "prerequisites": [
+                        {
+                            "requirement": "spend-gems",
+                            "amount": 200
+                        }
+                    ]
+                },
+                {
+                    "destination": "/levels/27",
+                    "prerequisites": [
+                        {
+                            "requirement": "own-orbs",
+                            "amount": 40
+                        }
+                    ]
+                },
+                {
+                    "destination": "/levels/28"
+                },
+                {
+                    "destination": "/levels/0"
+                },
+                {
+                    "destination": "/levels/9"
+                }
+            ]
         }
     ]
 }
