@@ -1002,6 +1002,41 @@
                     "destination": "/levels/9"
                 }
             ]
+        },
+        {
+            "kind": "realm",
+            "name": {
+                "en-gb": "Mystic Marsh"
+            },
+            "orbs": [
+                {
+                    "name": {
+                        "en-gb": "Fix the fountain"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "Very versatile thieves!"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "Retrieve the professor's pencil"
+                    }
+                }
+            ],
+            "homeworld": "/levels/21",
+            "portals": [
+                {
+                    "destination": "/levels/21",
+                    "prerequisites": [
+                        {
+                            "requirement": "own-specific-orb",
+                            "orb": "/levels/22/orbs/0"
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
