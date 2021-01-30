@@ -83,6 +83,12 @@
                             "amount": 6
                         }
                     ]
+                },
+                {
+                    "destination": "/levels/9"
+                },
+                {
+                    "destination": "/levels/21"
                 }
             ]
         },
