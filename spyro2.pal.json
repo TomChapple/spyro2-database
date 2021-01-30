@@ -951,6 +951,12 @@
             ],
             "portals": [
                 {
+                    "destination": "/levels/0"
+                },
+                {
+                    "destination": "/levels/9"
+                },
+                {
                     "destination": "/levels/22"
                 },
                 {
@@ -994,12 +1000,6 @@
                 },
                 {
                     "destination": "/levels/28"
-                },
-                {
-                    "destination": "/levels/0"
-                },
-                {
-                    "destination": "/levels/9"
                 }
             ]
         },
