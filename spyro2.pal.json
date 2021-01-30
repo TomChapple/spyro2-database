@@ -1202,6 +1202,18 @@
                 }
             ],
             "boss": "/levels/27/npcs/0"
+        },
+        {
+            "kind": "realm",
+            "name": {
+                "en-gb": "Dragon Shores"
+            },
+            "homeworld": "/levels/21",
+            "portals": [
+                {
+                    "destination": "/levels/21"
+                }
+            ]
         }
     ]
 }
