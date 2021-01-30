@@ -1037,6 +1037,41 @@
                     ]
                 }
             ]
+        },
+        {
+            "kind": "realm",
+            "name": {
+                "en-gb": "Cloud Temples"
+            },
+            "orbs": [
+                {
+                    "name": {
+                        "en-gb": "Break down doors"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "Agent Zero's secret hideout"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "Ring tower bells"
+                    }
+                }
+            ],
+            "homeworld": "/levels/21",
+            "portals": [
+                {
+                    "destination": "/levels/21",
+                    "prerequisites": [
+                        {
+                            "requirement": "own-specific-orb",
+                            "orb": "/levels/23/0"
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
