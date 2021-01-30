@@ -1072,6 +1072,41 @@
                     ]
                 }
             ]
+        },
+        {
+            "kind": "realm",
+            "name": {
+                "en-gb": "Robotica Farms"
+            },
+            "orbs": [
+                {
+                    "name": {
+                        "en-gb": "Switch on bug light"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "Clear tractor path"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "Exterminate crow bugs"
+                    }
+                }
+            ],
+            "homeworld": "/levels/21",
+            "portals": [
+                {
+                    "destination": "/levels/21",
+                    "prerequisites": [
+                        {
+                            "requirement": "own-specific-orb",
+                            "orb": "/levels/24/orbs/0"
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
