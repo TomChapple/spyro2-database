@@ -1142,6 +1142,51 @@
                     ]
                 }
             ]
+        },
+        {
+            "kind": "speedway",
+            "name": {
+                "en-gb": "Canyon Speedway"
+            },
+            "orbs": [
+                {
+                    "name": {
+                        "en-gb": "Shoot down balloons"
+                    }
+                }
+            ],
+            "homeworld": "/levels/21",
+            "targets": [
+                {
+                    "name": {
+                        "en-gb": "Rams"
+                    },
+                    "bonusTime": 1,
+                    "count": 8
+                },
+                {
+                    "name": {
+                        "en-gb": "Rings"
+                    },
+                    "bonusTime": 1,
+                    "count": 8
+                },
+                {
+                    "name": {
+                        "en-gb": "Bikers"
+                    },
+                    "bonusTime": 3,
+                    "count": 8
+                },
+                {
+                    "name": {
+                        "en-gb": "Vultures"
+                    },
+                    "bonusTime": 2,
+                    "count": 8
+                }
+            ],
+            "timeLimit": 30
         }
     ]
 }
