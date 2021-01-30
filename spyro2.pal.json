@@ -45,7 +45,28 @@
                     "location": "Opposite entrance to domed room with broken bridge within the wooded garden with a river running through it."
                 },
                 {
-                    "destination": "/levels/2",
+                    "destination": "/levels/2"
+                },
+                {
+                    "destination": "/levels/3"
+                },
+                {
+                    "destination": "/levels/4"
+                },
+                {
+                    "destination": "/levels/5"
+                },
+                {
+                    "destination": "/levels/6",
+                    "prerequisites": [
+                        {
+                            "requirement": "spend-gems",
+                            "amount": 400
+                        }
+                    ]
+                },
+                {
+                    "destination": "/levels/7",
                     "location": "Up the stairs on the left branch from the inner-castle hub.",
                     "prerequisites": [
                         {
@@ -55,13 +76,19 @@
                     ]
                 },
                 {
-                    "destination": "/levels/3",
+                    "destination": "/levels/8",
                     "prerequisites": [
                         {
                             "requirement": "own-talismans",
                             "amount": 6
                         }
                     ]
+                },
+                {
+                    "destination": "/levels/9"
+                },
+                {
+                    "destination": "/levels/21"
                 }
             ]
         },
@@ -159,6 +186,201 @@
             ]
         },
         {
+            "kind": "realm",
+            "name": {
+                "en-gb": "Idol Springs"
+            },
+            "talisman": {
+                "name": {
+                    "en-gb": "Jade Idol"
+                }
+            },
+            "orbs": [
+                {
+                    "name": {
+                        "en-gb": "Foreman Bud's puzzles"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "Hula Girl rescue"
+                    }
+                }
+            ],
+            "homeworld": "/levels/0",
+            "portals": [
+                {
+                    "destination": "/levels/0",
+                    "prerequisites": [
+                        {
+                            "requirement": "own-specific-talisman",
+                            "talisman": "/levels/2/talisman"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "kind": "realm",
+            "name": {
+                "en-gb": "Colossus"
+            },
+            "talisman": {
+                "name": {
+                    "en-gb": "Golden Statue"
+                }
+            },
+            "orbs": [
+                {
+                    "name": {
+                        "en-gb": "Hockey vs. Goalie"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "Hockey one on one"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "Evil spirit search"
+                    }
+                }
+            ],
+            "homeworld": "/levels/0",
+            "portals": [
+                {
+                    "destination": "/levels/0",
+                    "prerequisites": [
+                        {
+                            "requirement": "own-specific-talisman",
+                            "talisman": "/levels/3/talisman"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "kind": "realm",
+            "name": {
+                "en-gb": "Hurricos"
+            },
+            "talisman": {
+                "name": {
+                    "en-gb": "Gear of Power"
+                }
+            },
+            "orbs": [
+                {
+                    "name": {
+                        "en-gb": "Stone thief chase"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "Factory Glide 1"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "Factory Glide 2"
+                    }
+                }
+            ],
+            "homeworld": "/levels/0",
+            "portals": [
+                {
+                    "destination": "/levels/0",
+                    "prerequisites": [
+                        {
+                            "requirement": "own-specific-talisman",
+                            "talisman": "/levels/4/talisman"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "kind": "realm",
+            "name": {
+                "en-gb": "Sunny Beach"
+            },
+            "talisman": {
+                "name": {
+                    "en-gb": "Turtle Medallion"
+                }
+            },
+            "orbs": [
+                {
+                    "name": {
+                        "en-gb": "Blasting boxes"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "Turtle soup I"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "Turtle soup II"
+                    }
+                }
+            ],
+            "homeworld": "/levels/0",
+            "portals": [
+                {
+                    "destination": "/levels/0",
+                    "prerequisites": [
+                        {
+                            "requirement": "own-specific-talisman",
+                            "talisman": "/levels/5/talisman"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "kind": "realm",
+            "name": {
+                "en-gb": "Aquaria Towers"
+            },
+            "talisman": {
+                "name": {
+                    "en-gb": "Enchanted Shell"
+                }
+            },
+            "orbs": [
+                {
+                    "name": {
+                        "en-gb": "Seahorse rescue"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "Manta ride I"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "Manta ride II"
+                    }
+                }
+            ],
+            "homeworld": "/levels/0",
+            "portals": [
+                {
+                    "destination": "/levels/0",
+                    "prerequisites": [
+                        {
+                            "requirement": "own-specific-talisman",
+                            "talisman": "/levels/6/talisman"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "kind": "speedway",
             "name": {
                 "en-gb": "Ocean Speedway"
@@ -216,7 +438,788 @@
                     }
                 }
             ],
-            "boss": "/levels/3/npcs/0"
+            "boss": "/levels/8/npcs/0"
+        },
+        {
+            "kind": "homeworld",
+            "name": {
+                "en-gb": "Autumn Plains"
+            },
+            "orbs": [
+                {
+                    "name": {
+                        "en-gb": "The end of the wall"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "Long glide!"
+                    }
+                }
+            ],
+            "portals": [
+                {
+                    "destination": "/levels/0"
+                },
+                {
+                    "destination": "/levels/10"
+                },
+                {
+                    "destination": "/levels/11"
+                },
+                {
+                    "destination": "/levels/12"
+                },
+                {
+                    "destination": "/levels/13",
+                    "prerequisites": [
+                        {
+                            "requirement": "spend-gems",
+                            "amount": 400
+                        }
+                    ]
+                },
+                {
+                    "destination": "/levels/14"
+                },
+                {
+                    "destination": "/levels/15"
+                },
+                {
+                    "destination": "/levels/16"
+                },
+                {
+                    "destination": "/levels/17",
+                    "prerequisites": [
+                        {
+                            "requirement": "spend-gems",
+                            "amount": 400
+                        }
+                    ]
+                },
+                {
+                    "destination": "/levels/18",
+                    "prerequisites": [
+                        {
+                            "requirement": "own-orbs",
+                            "amount": 6
+                        }
+                    ]
+                },
+                {
+                    "destination": "/levels/19",
+                    "prerequisites": [
+                        {
+                            "requirement": "spend-gems",
+                            "amount": 100
+                        }
+                    ]
+                },
+                {
+                    "destination": "/levels/20"
+                },
+                {
+                    "destination": "/levels/21"
+                }
+            ]
+        },
+        {
+            "kind": "realm",
+            "name": {
+                "en-gb": "Skelos Badlands"
+            },
+            "talisman": {
+                "name": {
+                    "en-gb": "Ancient Bone"
+                }
+            },
+            "orbs": [
+                {
+                    "name": {
+                        "en-gb": "Lava lizards I"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "Lava lizards II"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "Dem bones"
+                    }
+                }
+            ],
+            "homeworld": "/levels/9",
+            "portals": [
+                {
+                    "destination": "/levels/9",
+                    "prerequisites": [
+                        {
+                            "requirement": "own-specific-talisman",
+                            "talisman": "/levels/10/talisman"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "kind": "realm",
+            "name": {
+                "en-gb": "Crystal Glacier"
+            },
+            "talisman": {
+                "name": {
+                    "en-gb": "Ice Crystal"
+                }
+            },
+            "orbs": [
+                {
+                    "name": {
+                        "en-gb": "Draclet cave"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "George the snow leopard"
+                    }
+                }
+            ],
+            "homeworld": "/levels/9",
+            "portals": [
+                {
+                    "destination": "/levels/9",
+                    "prerequisites": [
+                        {
+                            "requirement": "own-specific-talisman",
+                            "talisman": "/levels/11/talisman"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "kind": "realm",
+            "name": {
+                "en-gb": "Breeze Harbor"
+            },
+            "talisman": {
+                "name": {
+                    "en-gb": "Glass Anchor"
+                }
+            },
+            "orbs": [
+                {
+                    "name": {
+                        "en-gb": "Mine blast"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "Gear grab"
+                    }
+                }
+            ],
+            "homeworld": "/levels/9",
+            "portals": [
+                {
+                    "destination": "/levels/9",
+                    "prerequisites": [
+                        {
+                            "requirement": "own-specific-talisman",
+                            "talisman": "/levels/12/talisman"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "kind": "realm",
+            "name": {
+                "en-gb": "Zephyr"
+            },
+            "talisman": {
+                "name": {
+                    "en-gb": "Ruby Bomb"
+                }
+            },
+            "orbs": [
+                {
+                    "name": {
+                        "en-gb": "Cowlek corral I"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "Cowlek corral II"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "Sowing seeds I"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "Sowing seeds II"
+                    }
+                }
+            ],
+            "homeworld": "/levels/9",
+            "portals": [
+                {
+                    "destination": "/levels/9",
+                    "prerequisites": [
+                        {
+                            "requirement": "own-specific-talisman",
+                            "talisman": "/levels/13/talisman"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "kind": "realm",
+            "name": {
+                "en-gb": "Scorch"
+            },
+            "talisman": {
+                "name": {
+                    "en-gb": "Emerald Scarab"
+                }
+            },
+            "orbs": [
+                {
+                    "name": {
+                        "en-gb": "Barrel of Monkeys"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "Capture the flags"
+                    }
+                }
+            ],
+            "homeworld": "/levels/9",
+            "portals": [
+                {
+                    "destination": "/levels/9",
+                    "prerequisites": [
+                        {
+                            "requirement": "own-specific-talisman",
+                            "talisman": "/levels/14/talisman"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "kind": "realm",
+            "name": {
+                "en-gb": "Fracture Hills"
+            },
+            "talisman": {
+                "name": {
+                    "en-gb": "Bronze Flute"
+                }
+            },
+            "orbs": [
+                {
+                    "name": {
+                        "en-gb": "Free the faun"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "Alchemist escort"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "Earthshaper bash"
+                    }
+                }
+            ],
+            "homeworld": "/levels/9",
+            "portals": [
+                {
+                    "destination": "/levels/9",
+                    "prerequisites": [
+                        {
+                            "requirement": "own-specific-talisman",
+                            "talisman": "/levels/15/talisman"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "kind": "realm",
+            "name": {
+                "en-gb": "Magma Cone"
+            },
+            "talisman": {
+                "name": {
+                    "en-gb": "Volcano Idol"
+                }
+            },
+            "orbs": [
+                {
+                    "name": {
+                        "en-gb": "Party crashers"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "Crystal geysers I"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "Crystal geysers II"
+                    }
+                }
+            ],
+            "homeworld": "/levels/9",
+            "portals": [
+                {
+                    "destination": "/levels/9",
+                    "prerequisites": [
+                        {
+                            "requirement": "own-specific-talisman",
+                            "talisman": "/levels/16/talisman"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "kind": "realm",
+            "name": {
+                "en-gb": "Shady Oasis"
+            },
+            "talisman": {
+                "name": {
+                    "en-gb": "Mystic Lamp"
+                }
+            },
+            "orbs": [
+                {
+                    "name": {
+                        "en-gb": "Catch 3 thieves"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "Free Hippos"
+                    }
+                }
+            ],
+            "homeworld": "/levels/9",
+            "portals": [
+                {
+                    "destination": "/levels/9",
+                    "prerequisites": [
+                        {
+                            "requirement": "own-specific-talisman",
+                            "talisman": "/levels/17/talisman"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "kind": "speedway",
+            "name": {
+                "en-gb": "Metro Speedway"
+            },
+            "orbs": [
+                {
+                    "name": {
+                        "en-gb": "Grab the Loot"
+                    }
+                }
+            ],
+            "homeworld": "/levels/9",
+            "targets": [
+                {
+                    "name": {
+                        "en-gb": "Pigeons"
+                    },
+                    "bonusTime": 2,
+                    "count": 8
+                },
+                {
+                    "name": {
+                        "en-gb": "Jumpers"
+                    },
+                    "bonusTime": 3,
+                    "count": 8
+                },
+                {
+                    "name": {
+                        "en-gb": "Slow Signs"
+                    },
+                    "bonusTime": 1,
+                    "count": 8
+                },
+                {
+                    "name": {
+                        "en-gb": "Arches"
+                    },
+                    "bonusTime": 2,
+                    "count": 8
+                }
+            ],
+            "timeLimit": 30
+        },
+        {
+            "kind": "speedway",
+            "name": {
+                "en-gb": "Icy Speedway"
+            },
+            "orbs": [
+                {
+                    "name": {
+                        "en-gb": "Parasail through Rings"
+                    }
+                }
+            ],
+            "homeworld": "/levels/9",
+            "targets": [
+                {
+                    "name": {
+                        "en-gb": "Snowmobiles"
+                    },
+                    "bonusTime": 3,
+                    "count": 8
+                },
+                {
+                    "name": {
+                        "en-gb": "Arches"
+                    },
+                    "bonusTime": 2,
+                    "count": 8
+                },
+                {
+                    "name": {
+                        "en-gb": "Skaters"
+                    },
+                    "bonusTime": 2,
+                    "count": 8
+                },
+                {
+                    "name": {
+                        "en-gb": "Serpents"
+                    },
+                    "bonusTime": 3,
+                    "count": 8
+                }
+            ],
+            "timeLimit": 30
+        },
+        {
+            "kind": "boss",
+            "name": {
+                "en-gb": "Gulp's Overlook"
+            },
+            "homeworld": "/levels/9",
+            "npcs": [
+                {
+                    "name": {
+                        "en-gb": "Gulp"
+                    }
+                }
+            ],
+            "boss": "/levels/20/npcs/0"
+        },
+        {
+            "kind": "homeworld",
+            "name": {
+                "en-gb": "Winter Tundra"
+            },
+            "orbs": [
+                {
+                    "name": {
+                        "en-gb": "Top of the waterfall"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "One the tall wall"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "Smash the rock"
+                    }
+                }
+            ],
+            "portals": [
+                {
+                    "destination": "/levels/0"
+                },
+                {
+                    "destination": "/levels/9"
+                },
+                {
+                    "destination": "/levels/22"
+                },
+                {
+                    "destination": "/levels/23",
+                    "prerequisites": [
+                        {
+                            "requirement": "own-orbs",
+                            "amount": 15
+                        }
+                    ]
+                },
+                {
+                    "destination": "/levels/24"
+                },
+                {
+                    "destination": "/levels/25",
+                    "prerequisites": [
+                        {
+                            "requirement": "own-orbs",
+                            "amount": 25
+                        }
+                    ]
+                },
+                {
+                    "destination": "/levels/26",
+                    "prerequisites": [
+                        {
+                            "requirement": "spend-gems",
+                            "amount": 200
+                        }
+                    ]
+                },
+                {
+                    "destination": "/levels/27",
+                    "prerequisites": [
+                        {
+                            "requirement": "own-orbs",
+                            "amount": 40
+                        }
+                    ]
+                },
+                {
+                    "destination": "/levels/28"
+                }
+            ]
+        },
+        {
+            "kind": "realm",
+            "name": {
+                "en-gb": "Mystic Marsh"
+            },
+            "orbs": [
+                {
+                    "name": {
+                        "en-gb": "Fix the fountain"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "Very versatile thieves!"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "Retrieve the professor's pencil"
+                    }
+                }
+            ],
+            "homeworld": "/levels/21",
+            "portals": [
+                {
+                    "destination": "/levels/21",
+                    "prerequisites": [
+                        {
+                            "requirement": "own-specific-orb",
+                            "orb": "/levels/22/orbs/0"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "kind": "realm",
+            "name": {
+                "en-gb": "Cloud Temples"
+            },
+            "orbs": [
+                {
+                    "name": {
+                        "en-gb": "Break down doors"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "Agent Zero's secret hideout"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "Ring tower bells"
+                    }
+                }
+            ],
+            "homeworld": "/levels/21",
+            "portals": [
+                {
+                    "destination": "/levels/21",
+                    "prerequisites": [
+                        {
+                            "requirement": "own-specific-orb",
+                            "orb": "/levels/23/0"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "kind": "realm",
+            "name": {
+                "en-gb": "Robotica Farms"
+            },
+            "orbs": [
+                {
+                    "name": {
+                        "en-gb": "Switch on bug light"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "Clear tractor path"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "Exterminate crow bugs"
+                    }
+                }
+            ],
+            "homeworld": "/levels/21",
+            "portals": [
+                {
+                    "destination": "/levels/21",
+                    "prerequisites": [
+                        {
+                            "requirement": "own-specific-orb",
+                            "orb": "/levels/24/orbs/0"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "kind": "realm",
+            "name": {
+                "en-gb": "Metropolis"
+            },
+            "orbs": [
+                {
+                    "name": {
+                        "en-gb": "Conquer invading cows"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "Shoot down sheep saucers I"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "Shoot down sheep saucers II"
+                    }
+                }
+            ],
+            "homeworld": "/levels/21",
+            "portals": [
+                {
+                    "destination": "/levels/21",
+                    "prerequisites": [
+                        {
+                            "requirement": "own-specific-orb",
+                            "orb": "/levels/25/orbs/0"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "kind": "speedway",
+            "name": {
+                "en-gb": "Canyon Speedway"
+            },
+            "orbs": [
+                {
+                    "name": {
+                        "en-gb": "Shoot down balloons"
+                    }
+                }
+            ],
+            "homeworld": "/levels/21",
+            "targets": [
+                {
+                    "name": {
+                        "en-gb": "Rams"
+                    },
+                    "bonusTime": 1,
+                    "count": 8
+                },
+                {
+                    "name": {
+                        "en-gb": "Rings"
+                    },
+                    "bonusTime": 1,
+                    "count": 8
+                },
+                {
+                    "name": {
+                        "en-gb": "Bikers"
+                    },
+                    "bonusTime": 3,
+                    "count": 8
+                },
+                {
+                    "name": {
+                        "en-gb": "Vultures"
+                    },
+                    "bonusTime": 2,
+                    "count": 8
+                }
+            ],
+            "timeLimit": 30
+        },
+        {
+            "kind": "boss",
+            "name": {
+                "en-gb": "Ripto's Arena"
+            },
+            "homeworld": "/levels/21",
+            "npcs": [
+                {
+                    "name": {
+                        "en-gb": "Ripto"
+                    }
+                }
+            ],
+            "boss": "/levels/27/npcs/0"
+        },
+        {
+            "kind": "realm",
+            "name": {
+                "en-gb": "Dragon Shores"
+            },
+            "homeworld": "/levels/21",
+            "portals": [
+                {
+                    "destination": "/levels/21"
+                }
+            ]
         }
     ]
 }
