@@ -1107,6 +1107,41 @@
                     ]
                 }
             ]
+        },
+        {
+            "kind": "realm",
+            "name": {
+                "en-gb": "Metropolis"
+            },
+            "orbs": [
+                {
+                    "name": {
+                        "en-gb": "Conquer invading cows"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "Shoot down sheep saucers I"
+                    }
+                },
+                {
+                    "name": {
+                        "en-gb": "Shoot down sheep saucers II"
+                    }
+                }
+            ],
+            "homeworld": "/levels/21",
+            "portals": [
+                {
+                    "destination": "/levels/21",
+                    "prerequisites": [
+                        {
+                            "requirement": "own-specific-orb",
+                            "orb": "/levels/25/orbs/0"
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
