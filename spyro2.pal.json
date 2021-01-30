@@ -1187,6 +1187,21 @@
                 }
             ],
             "timeLimit": 30
+        },
+        {
+            "kind": "boss",
+            "name": {
+                "en-gb": "Ripto's Arena"
+            },
+            "homeworld": "/levels/21",
+            "npcs": [
+                {
+                    "name": {
+                        "en-gb": "Ripto"
+                    }
+                }
+            ],
+            "boss": "/levels/27/npcs/0"
         }
     ]
 }
