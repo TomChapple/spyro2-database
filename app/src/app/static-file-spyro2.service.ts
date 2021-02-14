@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { Level } from "./level";
 import { Locale } from "./locale";
 import { Spyro2Service } from './spyro2.service';
@@ -15,54 +16,10 @@ export class StaticFileSpyro2Service extends Spyro2Service {
   _levels$: Observable<Iterable<Level>>;
   _locales$: Observable<Set<Locale>>;
 
-  constructor() {
+  constructor(private http: HttpClient) {
     super();
 
-    this.database$ = from([{
-      locales: [
-        {
-          id: 'en-gb',
-          name: 'English'
-        }
-      ],
-      levels: [
-        {
-          name: {
-            'en-gb': 'Summer Forest'
-          }
-        },
-        {
-          name: {
-            'en-gb': 'Glimmer'
-          }
-        },
-        {
-          name: {
-            'en-gb': 'Idol Spring'
-          }
-        },
-        {
-          name: {
-            'en-gb': 'Colossus'
-          }
-        },
-        {
-          name: {
-            'en-gb': 'Hurricos'
-          }
-        },
-        {
-          name: {
-            'en-gb': 'Sunny Beach'
-          }
-        },
-        {
-          name: {
-            'en-gb': 'Aquaria Towers'
-          }
-        }
-      ]
-    }])
+    this.database$ = this.http.get('https://raw.githubusercontent.com/TomChapple/spyro2-database/main/spyro2.pal.json');
 
     this._levels$ = this.database$.pipe(
       map(db => db.levels.map(jsonToLevel))
