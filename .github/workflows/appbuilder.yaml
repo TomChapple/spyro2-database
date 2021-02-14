@@ -1,0 +1,89 @@
+name: App Builder
+
+# Trigger whenever the 'app/' folder is updated on 'main'
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'app/**'
+
+jobs:
+  ng-build:
+    name: Build angular application
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./app
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Cache node modules
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+          
+      - name: Install dependencies
+        run: npm install
+      
+      - name: Build
+        run: npm run build --prod
+
+      # - name: Test
+      #   run: npm run test -- --no-watch --no-progress --browsers=ChromeHeadless
+
+      # - name: Test end-to-end
+      #   run: npm run e2e -- --no-watch --no-progress --browsers=ChromeHeadless
+
+      - name: Archive production artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: angular-app-dist
+          path: |
+            dist
+          retention-days: 1
+  create-pr:
+    name: Create pull request
+    needs: ng-build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Load archived dist artifacts
+        uses: actions/download-artifact@v2
+        with:
+          name: angular-app-dist
+
+      - name: Create pull request
+        uses: peter-evans/create-pull-request@v3
+        with:
+          title: Publish latest application build
+          body: >
+            Generated using the [create-pull-request](https://github.com/peter-evans/create-pull-request)
+            GitHub action.
+
+            This pull request creates the necessary build artifacts for the web
+            application and places them in the `dist/` directory to be available
+            in GitHub Pages. This Pull Request should be used as an opportunity
+            to review the contents and functionality of the web application
+            before it becomes publicly available.
+          commit-message: |
+            [create-pull-request] Automated app build
+
+            Adds build artifacts generated from ${{ github.sha }}.
+          branch: build/app
+          delete-branch: true
+          reviewers: ${{ github.repository_owner }}
