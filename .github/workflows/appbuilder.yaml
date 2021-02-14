@@ -66,6 +66,7 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: angular-app-dist
+          path: dist
 
       - name: Create pull request
         uses: peter-evans/create-pull-request@v3
@@ -74,6 +75,7 @@ jobs:
           body: >
             Generated using the [create-pull-request](https://github.com/peter-evans/create-pull-request)
             GitHub action.
+
 
             This pull request creates the necessary build artifacts for the web
             application and places them in the `dist/` directory to be available
