@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { EMPTY, Observable } from 'rxjs';
 import { Level } from '../level';
-import { PreferencesService } from '../preferences.service';
 
 @Component({
   selector: 'app-level',
@@ -9,9 +9,9 @@ import { PreferencesService } from '../preferences.service';
 })
 export class LevelComponent implements OnInit {
 
-  constructor(private preferences: PreferencesService) {}
+  constructor() {}
 
-  @Input() level: Level = {name(string) { return ''; }}
+  @Input() level: Level = { name(locale) { return EMPTY } };
 
   ngOnInit(): void {
   }
