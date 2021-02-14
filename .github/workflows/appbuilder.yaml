@@ -54,4 +54,36 @@ jobs:
           path: |
             dist
           retention-days: 1
-    
+  create-pr:
+    name: Create pull request
+    needs: ng-build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Load archived dist artifacts
+        uses: actions/download-artifact@v2
+        with:
+          name: angular-app-dist
+
+      - name: Create pull request
+        uses: peter-evans/create-pull-request@v3
+        with:
+          title: Publish latest application build
+          body: >
+            Generated using the [create-pull-request](https://github.com/peter-evans/create-pull-request)
+            GitHub action.
+
+            This pull request creates the necessary build artifacts for the web
+            application and places them in the `dist/` directory to be available
+            in GitHub Pages. This Pull Request should be used as an opportunity
+            to review the contents and functionality of the web application
+            before it becomes publicly available.
+          commit-message: |
+            [create-pull-request] Automated app build
+
+            Adds build artifacts generated from ${{ github.sha }}.
+          branch: build/app
+          delete-branch: true
+          reviewers: ${{ github.repository_owner }}
