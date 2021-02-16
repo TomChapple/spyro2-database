@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Observable, EMPTY } from 'rxjs';
+import { mergeMap } from 'rxjs/operators';
 import { LocalisedText } from '../localised-text';
 import { PreferencesService } from '../preferences.service';
 
@@ -9,15 +11,20 @@ import { PreferencesService } from '../preferences.service';
 })
 export class LocalisedTextComponent implements OnInit {
 
-  @Input('localText') localisedText: LocalisedText = (locale) => "";
+  @Input('localText') localisedText: LocalisedText = (locale) => EMPTY;
 
-  get preferredText(): String {
-    return this.localisedText(this.preferences.preferredLocale?.id ?? "");
+  _preferredText$: Observable<string> = EMPTY;
+
+  get preferredText$(): Observable<string> {
+    return this._preferredText$;
   }
 
   constructor(private preferences: PreferencesService) { }
 
   ngOnInit(): void {
+    this._preferredText$ = this.preferences.preferredLocale$.pipe(
+      mergeMap((locale) => this.localisedText(locale))
+    )
   }
 
 }

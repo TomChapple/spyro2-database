@@ -1,4 +1,4 @@
 <h1>Spyro 2 Database</h1>
 
-<app-level [level]="level" *ngFor="let level of levels">
+<app-level [level]="level" *ngFor="let level of levels$ | async">
 </app-level>

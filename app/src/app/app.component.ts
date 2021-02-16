@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Spyro2Service } from './spyro2.service'
 import { Level } from './level'
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +14,7 @@ export class AppComponent {
 
   title = 'app';
 
-  get levels(): Iterable<Level> {
-    return this.service.levels;
+  get levels$(): Observable<Iterable<Level>> {
+    return this.service.levels$;
   }
 }

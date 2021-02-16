@@ -1,3 +1,6 @@
+import { Observable } from 'rxjs';
+import { Locale } from './locale';
+
 export interface LocalisedText {
     /**
      * Retrieves a value based on a specified locale.
@@ -14,5 +17,5 @@ export interface LocalisedText {
      *
      * @param locale The locale as an IETF language tag
      */
-    (locale: string): string;
+    (locale: Locale): Observable<string>;
 }
