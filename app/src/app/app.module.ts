@@ -9,6 +9,7 @@ import { LevelComponent } from './level/level.component';
 import { Spyro2Service } from "./spyro2.service";
 import { StaticFileSpyro2Service } from "./static-file-spyro2.service";
 import { LocalisedTextComponent } from './localised-text/localised-text.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { LocalisedTextComponent } from './localised-text/localised-text.componen
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
   ],
   providers: [
     {provide: Spyro2Service, useClass: StaticFileSpyro2Service }

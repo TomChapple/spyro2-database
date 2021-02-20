@@ -1,5 +1,8 @@
-
-<h2 *ngIf="level.name">
-    <app-localised-text [localText]="level.name"></app-localised-text>
-</h2>
-<p>level works!!</p>
+<div class="card">
+    <img src="assets/blank.png" class="card-img-top"/>
+    <div class="card-body py-2 px-3">
+        <h4 *ngIf="level.name" class="card-title m-0">
+            <app-localised-text [localText]="level.name"></app-localised-text>
+        </h4>
+    </div>
+</div>

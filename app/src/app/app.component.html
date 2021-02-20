@@ -1,4 +1,10 @@
-<h1>Spyro 2 Database</h1>
-
-<app-level [level]="level" *ngFor="let level of levels$ | async">
-</app-level>
+<nav class="navbar navbar-expand-md navbar-dark bg-primary fixed-top">
+    <a class="navbar-brand">Spyro 2 Database</a>
+</nav>
+<main>
+    <div class="container-xl">
+        <div *ngFor="let level of levels$ | async" class="level">
+            <app-level [level]="level"></app-level>
+        </div>
+    </div>
+</main>
