@@ -1,13 +1,19 @@
+@use "sass:map"
 @import '~bootstrap/scss/bootstrap'
 
 main
     margin-top: 3.5rem
 
+$max-levels-per-row: 3
+$level-spacing: 1rem
+$level-width: calc(#{map.get($container-max-widths, "xl") - $grid-gutter-width} / 3 - 2 * #{$level-spacing})
+
 .level
-    width: 20rem
-    margin: 1rem auto
+    width: $level-width
+    margin: $level-spacing auto
 
 +media-breakpoint-up(sm)
     .level
+        width: $level-width
         float: left    
-        margin: 1rem
+        margin: $level-spacing
